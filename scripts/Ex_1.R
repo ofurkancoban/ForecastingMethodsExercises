@@ -58,9 +58,9 @@ df <- cbind(age, names) # Combines lists
 
 # Don'ts in R ----
 
-111 <- c(8.7)
-$ <- c(7,9)
-1c1 <- c(8,1)
+# 111 <- c(8.7)
+# $ <- c(7,9)
+# 1c1 <- c(8,1)
 
 # Create a numeric vector ----
 
@@ -74,11 +74,11 @@ mean(age, na.rm=TRUE)
 
 # Importing Data ----
 
-stan <- read_dta("~/Desktop/Uni Oldenburg/WiSe24:25/Forecasting Methods/Exercises/datasets/STAN_ALL.dta")
+stan <- read_dta("~/Desktop/Uni Oldenburg/WiSe24:25/Forecasting Methods/ForecastingMethodsExercises/ForecastingMethodsExercises/datasets/STAN_ALL.dta")
 View(stan)
 
 
-stan_csv <- read_csv("~/Desktop/Uni Oldenburg/WiSe24:25/Forecasting Methods/Exercises/datasets/STAN_ALL.csv")
+stan_csv <- read_csv("~/Desktop/Uni Oldenburg/WiSe24:25/Forecasting Methods/ForecastingMethodsExercises/ForecastingMethodsExercises/datasets/STAN_ALL.csv")
 View(stan_csv)
 
 
@@ -131,6 +131,30 @@ stan_3 <- stan_csv %>%
   arrange(desc(COUNTRY)) %>% 
   arrange(desc(OECDCODE)) %>% 
   arrange(desc(YEAR))
+
+
+# Exercise 2 - 24 October 2024 ----
+
+# Data Manipulations ----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
