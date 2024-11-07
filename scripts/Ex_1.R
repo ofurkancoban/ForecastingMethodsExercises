@@ -133,9 +133,7 @@ stan_3 <- stan_csv %>%
   arrange(desc(YEAR))
 
 
-# Exercise 2 - 24 October 2024 ----
 
-# Data Manipulations ----
 
 
 

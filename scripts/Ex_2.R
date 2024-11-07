@@ -147,6 +147,17 @@ dev.off()  # Close the PNG file
 
 # Merging Datasets ----
 
+ds1 <- STAN_red %>% 
+  dplyr::select(COUNTRY, YEAR, ISICREV3)
+ds2 <- STAN_red %>% 
+  dplyr::select(COUNTRY, YEAR, ISICREV3, PROD, prod_gwr)
+
+# Join DS1 and DS2
+
+ds_full <- dplyr::left_join(ds1, ds2, by=c("COUNTRY","YEAR","ISICREV3"))
+
+ds_full <- ds_full %>% 
+  dplyr::arrange(COUNTRY, YEAR, ISICREV3)
 
 
 
