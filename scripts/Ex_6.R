@@ -71,7 +71,7 @@ elec <- elec %>%
   mutate(time = as.Date(as.yearmon(year, format ="%Y %B")),
          month = month(time),
          ID = row_number()
-         )
+  )
 
 # Plot the data ----
 
@@ -109,7 +109,7 @@ summary(reg_ols)
 
 elec <- elec %>% 
   mutate(forecast=predict(reg_ols, newdata =.))
-  
+
 
 # Compute the errors ----
 
@@ -146,8 +146,8 @@ ggplot(elec, aes(x = time)) +
        y = "Electricity",
        color = "Legend")
 
-  
-  
+
+
 # Holt-Winters Multiplicative Model ----
 
 hw_m <- hw(elec_train, seasonal = "multiplicative", h = 11)
@@ -178,7 +178,7 @@ generics::accuracy(hw_a, elec_test)
 elec <- elec %>% 
   mutate(
     log_eletpus = log(eletpus)
-    )
+  )
 
 elec_train_log <- ts(elec$log_eletpus[1:444], start = c(1973, 1), frequency = 12)
 elec_test_log <- ts(elec$log_eletpus[445:455], start = c(2010, 1), frequency = 12)
