@@ -8,3 +8,5 @@ library(ggplot2)
 library(readr)
 
 # Oilgold Data ----
+
+gold <- read_csv("~/Desktop/Uni Oldenburg/WiSe24:25/Forecasting Methods/ForecastingMethodsExercises/ForecastingMethodsExercises/datasets/oilgold.csv")
